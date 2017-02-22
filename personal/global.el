@@ -173,12 +173,9 @@
    (define-key ido-completion-map (kbd "C-p") 'ido-prev-match))
  (add-hook 'ido-setup-hook 'ido-define-keys)
 
-(require 'robe)
-(add-hook 'ruby-mode-hook 'robe-mode)
-(eval-after-load 'company
-  '(push 'company-robe company-backends))
-(add-hook 'robe-mode-hook 'ac-robe-setup)
-
 (require 'rbenv)
 (global-rbenv-mode)
 (rbenv-use-corresponding)
+
+(setq sml/theme 'dark)
+(sml/setup)
